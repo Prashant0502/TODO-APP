@@ -1,0 +1,80 @@
+/* for body container */
+body{
+    background-color:#090a09eb;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* for h1 heading*/
+h1{
+    color: yellow;
+    font-family: 'Georgia', serif;
+}
+/* th{
+    color: #493d3d;
+} */
+
+#todo-heading{
+    color: #1f8d28;
+}
+/* for add and delete button */
+input[type=submit]{
+    color: #f2f208;
+    background-color: #e60909;
+    width: 129px;
+    height: 43px;
+    margin: 5px;
+    border: 2px solid #c12115;
+    font-size: medium;
+    font-family: cursive;
+    border-radius: 7px;
+}
+/* for todo list discription */
+td{
+    color: #24268b;
+    font-size: large;
+    font-family: math;
+}
+
+/* for display container */
+.todo-container {
+    border: 10px solid #1f8d28;
+    padding: 166px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #e47a7ae3;
+    margin-left: 100px;
+    margin-right: 62px;
+}
+
+/* styling all container */
+.container {
+    border: 3px solid #e7eee8;
+    border-radius: 9px;
+    background-color: #4ce6d7;
+    margin-top: -18%;
+    margin-left: -142px;
+    margin-right: -142px;
+  }
+/* for heading */
+  .table-heading{
+    background-color: #4ce6d7;
+    margin: auto;
+    width: 800px;
+    height: 60px;
+  }
+
+/* for display box */
+  #table-disply{
+    border: 2px solid #e7eee8;
+    border-radius: 20px;
+    background-color: #4ce6d7;
+    margin-left: -84px;
+    width: 614px;
+    height: 150px;
+    margin-right: -40px;
+  }
+
+ 
+
+  

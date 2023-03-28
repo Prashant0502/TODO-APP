@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>
+
+        <%= tittle %>
+
+    </title>
+
+    <link rel="stylesheet" href="./style.css" </head>
+
+<body>
+    <!-- body container -->
+
+    <h1 align ="center" >TODO APP</h1> 
+    <div class="todo-container">
+       
+
+        <!-- todo selection part container -->
+        <section class="container">
+              
+
+            <!-- form to create task -->
+            <form action="/create-task" method="POST">
+                
+                <table class="table-heading">
+                    <thead>
+                        <tr>
+                            <th>ADD TASKS </th>
+                            <th> SELECT CATEGORY </th>
+                            <th> SELECT TASK DATE</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td> <input type="text" name="description" placeholder="ENTER YOUR TASK HERE" required></input>
+                            </th>
+                        <td> <select name="category" required>
+                                <option> </option>
+                                <option>   Personal</option>
+                                <option>Work</option>   
+                                <option>School</option>
+                                <option>Cleaning</option>
+                                <option>Other</option>
+
+                            </select></th>
+                        <td> <input type="date"  name="date" required></th>
+                        <td><input type="submit" class="btn btn-success" id="add" value="ADD TASK"></th>
+                    </tr>
+                    
+                </table>
+
+            </form>
+        </section>
+        <div>
+            <h1 align="center"> TODO LIST </h1>
+
+            <form action="/delete-task" method="GET">
+
+                <table id="table-disply">
+                    <thead>
+                        <tr>
+                            <!-- <div class = "todo-heading"> -->
+                            <th > SELECT</th>
+                            <th>TASK</th>
+                            <th>CATEGORY</th>
+                            <th> DUE DATE</th>
+                            <!-- </div> -->
+                        </tr>
+                    </thead>
+
+
+                    <% for(let i of task) { %>
+
+
+                        <tr>
+                            <td> <input type="checkbox" name="<%= i._id %>"></td>
+                            <td>
+                                <p id="task-description" ;>
+                                    <%= i.description %>
+                            </td>
+                            <td>
+                                <p id="task-category"></p>
+                                <%= i.category %>
+                            </td>
+                            <td>
+                                <p id="due-date">
+                                    <%= i.date %>
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        <% } %>
+
+
+
+
+                </table>
+                
+                <div align="center"><input type="submit" class="btn btn-danger" value="DELETE TASK">
+                </div>
+                
+            </form>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
